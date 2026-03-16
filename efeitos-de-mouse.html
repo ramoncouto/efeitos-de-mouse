@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos de Mouse</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        div {
+            text-align: center;
+            line-height: 250px;
+            height: 250px;
+            width: 250px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        var div = document.getElementById('div')
+        div.addEventListener('mouseenter', entrar)
+        div.addEventListener('mouseleave', sair)
+        div.addEventListener('mousedown', segurar)
+        div.addEventListener('mouseup', soltar)
+        
+        function entrar() {
+            div.style.background = 'yellow'
+            div.innerText = 'Bem-Vindo!' 
+        }
+
+        function sair() {
+            div.style.background = 'grey'
+            div.innerText = 'Passe o mouse'
+        }
+
+        function segurar() {
+            div.style.background = 'red'
+            div.innerText = 'Segurando!'
+        }
+
+        function soltar() {
+            div.style.background = 'yellow'
+            div.innerText = 'Soltou!'
+        }
+
+    </script>
+</body>
+</html>
